@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:royal_property/ui/widgets/white_appbar.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -6,6 +7,17 @@ class ForgetPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: WhiteAppBar("Skip", (){}),);
+    return Scaffold(
+      appBar: WhiteAppBar("Skip", () {}),
+      body: Column(
+        children: [
+          Text("Forgot password",
+              style: TextStyle(
+                  fontSize: 24.0.sp,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF1B1E28))),
+        ],
+      ),
+    );
   }
 }
