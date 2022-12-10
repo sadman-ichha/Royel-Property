@@ -19,22 +19,26 @@ class ForgetPasswordScreen extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(24.0))),
             content: Container(
-              height: 213.0.h,
+              height: 180.0.h,
               width: 342.0.w,
               decoration: BoxDecoration(
                 color: AppColors.scaffoldBackgroundColor,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(),
+                  // SizedBox(height: 25.0.h),
+                  CircleAvatar(child: Icon(Icons.email_outlined),),
+                  SizedBox(height: 27.0.h),
                   Text("Check your email",
                       style: TextStyle(
                           fontSize: 24.0.sp,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF1B1E28))),
+                          SizedBox(height:10.0.h),
                   Text(
-                    "We have send password recovery instruction to your email",
+                    "We have send password recovery\n instruction to your email",
+                    textAlign: TextAlign.center,
                     style: AppStyles.textStyle,
                   ),
                 ],
