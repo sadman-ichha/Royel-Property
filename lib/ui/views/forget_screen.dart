@@ -28,14 +28,16 @@ class ForgetPasswordScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // SizedBox(height: 25.0.h),
-                  CircleAvatar(child: Icon(Icons.email_outlined),),
+                  CircleAvatar(
+                    child: Icon(Icons.email_outlined),
+                  ),
                   SizedBox(height: 27.0.h),
                   Text("Check your email",
                       style: TextStyle(
                           fontSize: 24.0.sp,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF1B1E28))),
-                          SizedBox(height:10.0.h),
+                  SizedBox(height: 10.0.h),
                   Text(
                     "We have send password recovery\n instruction to your email",
                     textAlign: TextAlign.center,
