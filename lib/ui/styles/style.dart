@@ -11,7 +11,7 @@ class AppStyles {
             style: TextStyle(
               fontSize: 16.0.sp,
               fontWeight: FontWeight.w400,
-              color: Color(0xFF707B81),
+              color: const Color(0xFF707B81),
             ),
             children: [
               TextSpan(

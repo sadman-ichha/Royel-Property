@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:royal_property/ui/views/forget_screen.dart';
 import 'package:royal_property/ui/views/onboarding_screen.dart';
 import 'package:royal_property/ui/views/splash_screen.dart';
 
@@ -9,6 +10,7 @@ const String splash = "/splash-screen";
 const String onboarding = "/onboarding-screen";
 const String signup = "/signup-screen";
 const String login = "/login-screen";
+const String forgetpassword = "/forgetpassword-screen";
 
 List<GetPage> getPages = [
   GetPage(
@@ -26,5 +28,9 @@ List<GetPage> getPages = [
   GetPage(
     name: login,
     page: () => LogInScreen(),
+  ),
+  GetPage(
+    name: forgetpassword,
+    page: () => ForgetPasswordScreen(),
   ),
 ];

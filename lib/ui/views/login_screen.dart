@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:royal_property/const/app_colors.dart';
 import 'package:royal_property/const/app_images.dart';
 import 'package:royal_property/routes/route.dart';
@@ -47,7 +48,7 @@ class LogInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: ()=> Get.toNamed(forgetpassword),
                     child: Text("Forget Password?",
                         style: TextStyle(
                             fontSize: 16.0.sp,
