@@ -7,7 +7,7 @@ import 'package:royal_property/routes/route.dart';
 import 'package:royal_property/ui/views/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
