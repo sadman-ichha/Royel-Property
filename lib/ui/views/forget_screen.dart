@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_final_fields
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:royal_property/const/app_colors.dart';
 import 'package:royal_property/ui/styles/style.dart';
 import 'package:royal_property/ui/widgets/blue_button.dart';
 import 'package:royal_property/ui/widgets/custom_text_field.dart';
@@ -8,8 +11,37 @@ import 'package:royal_property/ui/widgets/white_appbar.dart';
 class ForgetPasswordScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
 
-  checkEmailPopup() {
-    return Container();
+  checkEmailPopup(context) {
+    return showDialog(
+        context: context,
+        builder: (_) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(24.0))),
+            content: Container(
+              height: 213.0.h,
+              width: 342.0.w,
+              decoration: BoxDecoration(
+                color: AppColors.scaffoldBackgroundColor,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CircleAvatar(),
+                  Text("Check your email",
+                      style: TextStyle(
+                          fontSize: 24.0.sp,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF1B1E28))),
+                  Text(
+                    "We have send password recovery instruction to your email",
+                    style: AppStyles.textStyle,
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 
   @override
@@ -39,7 +71,9 @@ class ForgetPasswordScreen extends StatelessWidget {
           customTextField(
               "your@gmail.com", _emailController, TextInputType.emailAddress),
           SizedBox(height: 40.0.h),
-          BlueButton("Reset Password", () {})
+          BlueButton("Reset Password", () {
+            checkEmailPopup(context);
+          }),
         ],
       ),
     );
