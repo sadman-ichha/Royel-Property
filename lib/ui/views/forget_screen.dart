@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:royal_property/const/app_colors.dart';
+import 'package:royal_property/routes/route.dart';
 import 'package:royal_property/ui/styles/style.dart';
 import 'package:royal_property/ui/widgets/blue_button.dart';
 import 'package:royal_property/ui/widgets/custom_text_field.dart';
@@ -78,7 +80,8 @@ class ForgetPasswordScreen extends StatelessWidget {
               "your@gmail.com", _emailController, TextInputType.emailAddress),
           SizedBox(height: 40.0.h),
           BlueButton("Reset Password", () {
-            checkEmailPopup(context);
+            // checkEmailPopup(context);
+            Get.toNamed(otpverificationscreen);
           }),
         ],
       ),

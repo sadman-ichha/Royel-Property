@@ -21,7 +21,7 @@ class OtpVerificationScreen extends StatelessWidget {
           WhiteAppBar("Skip", () {}),
           SizedBox(height: 37.0.h),
           Center(
-            child: Text("Forgot password",
+            child: Text("OTP Verification",
                 style: TextStyle(
                     fontSize: 24.0.sp,
                     fontWeight: FontWeight.w700,
@@ -29,14 +29,12 @@ class OtpVerificationScreen extends StatelessWidget {
           ),
           SizedBox(height: 12.0.h),
           Text(
-            "Enter your email account to reset \n your password",
+            "Please check your email www.uihut@gmail.com to see the verification code",
             textAlign: TextAlign.center,
             style: AppStyles.textStyle,
           ),
           SizedBox(height: 37.0.h),
-          customTextField(
-              "your@gmail.com", _emailController, TextInputType.emailAddress),
-          SizedBox(height: 40.0.h),
+         
           BlueButton("Reset Password", () {}),
         ],
       ),
