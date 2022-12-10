@@ -10,12 +10,17 @@ class ForgetPasswordScreen extends StatelessWidget {
     return Scaffold(
       appBar: WhiteAppBar("Skip", () {}),
       body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+       // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Forgot password",
-              style: TextStyle(
-                  fontSize: 24.0.sp,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF1B1E28))),
+           SizedBox(height: 37.0.h),
+          Center(
+            child: Text("Forgot password",
+                style: TextStyle(
+                    fontSize: 24.0.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF1B1E28))),
+          ),
         ],
       ),
     );
