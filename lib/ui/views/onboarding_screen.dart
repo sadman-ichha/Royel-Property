@@ -1,11 +1,11 @@
-import 'package:dots_indicator/dots_indicator.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:royal_property/const/app_colors.dart';
 import 'package:royal_property/const/app_images.dart';
 import 'package:royal_property/routes/route.dart';
 import 'package:royal_property/ui/widgets/blue_button.dart';
+import 'package:royal_property/ui/widgets/dots_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -53,17 +53,7 @@ class OnBoardingScreen extends StatelessWidget {
                         height: 1.5.h,
                         wordSpacing: 1.8.sp)),
                 SizedBox(height: 40.0.h),
-                DotsIndicator(
-                  decorator: DotsDecorator(
-                    size: const Size.square(9.0),
-                    activeSize: const Size(35.0, 9.0),
-                    activeColor: AppColors.appBlueColor,
-                    color: const Color(0xFFBFD9FF),
-                    activeShape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
-                  ),
-                  dotsCount: 3,
-                ),
+              DotIndicator.dotIndicator,
                 SizedBox(height: 40.0.h),
                 BlueButton("Get Started", () {
                   Get.toNamed(signup);

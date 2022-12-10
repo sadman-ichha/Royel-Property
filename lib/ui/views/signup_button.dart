@@ -34,14 +34,12 @@ class SignUpScreen extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     color: Color(0xFF7D848D))),
             SizedBox(height: 36.0.h),
-            customTextField(
-                "Name", _nameController, TextInputType.emailAddress),
+            customTextField("Name", _nameController, TextInputType.name),
             SizedBox(height: 32.0.h),
             customTextField(
                 "your@gmail.com", _emailController, TextInputType.emailAddress),
             SizedBox(height: 32.0.h),
-            passwordField("Your Email", "Your@gmail.com", _passwordController,
-                TextInputType.none),
+            passwordField(_passwordController, TextInputType.none),
             SizedBox(height: 81.0.h),
             BlueButton("Sign Up", () {}),
             SizedBox(height: 40.0.h),
@@ -53,25 +51,35 @@ class SignUpScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  AppImages.fbLogo,
-                  height: 44.0.h,
-                  width: 44.0.w,
+                InkWell(
+                  onTap: () {},
+                  child: Image.asset(
+                    AppImages.fbLogo,
+                    height: 44.0.h,
+                    width: 44.0.w,
+                  ),
                 ),
                 SizedBox(width: 20.0.w),
-                Image.asset(
-                  AppImages.instraLogo,
-                  height: 44.0.h,
-                  width: 44.0.w,
+                InkWell(
+                  onTap: (() {}),
+                  child: Image.asset(
+                    AppImages.instraLogo,
+                    height: 44.0.h,
+                    width: 44.0.w,
+                  ),
                 ),
                 SizedBox(width: 20.0.w),
-                Image.asset(
-                  AppImages.twitterLogo,
-                  height: 44.0.h,
-                  width: 44.0.w,
+                InkWell(
+                  onTap: () {},
+                  child: Image.asset(
+                    AppImages.twitterLogo,
+                    height: 44.0.h,
+                    width: 44.0.w,
+                  ),
                 ),
               ],
             )
+         
           ],
         ),
       ),
