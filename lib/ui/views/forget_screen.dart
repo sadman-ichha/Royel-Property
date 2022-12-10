@@ -8,6 +8,10 @@ import 'package:royal_property/ui/widgets/white_appbar.dart';
 class ForgetPasswordScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
 
+  checkEmailPopup() {
+    return Container();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
