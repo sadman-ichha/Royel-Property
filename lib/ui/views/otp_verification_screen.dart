@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:royal_property/ui/styles/style.dart';
-import 'package:royal_property/ui/widgets/blue_button.dart';
-import 'package:royal_property/ui/widgets/custom_text_field.dart';
+
 import 'package:royal_property/ui/widgets/white_appbar.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
@@ -34,8 +34,11 @@ class OtpVerificationScreen extends StatelessWidget {
             style: AppStyles.textStyle,
           ),
           SizedBox(height: 37.0.h),
-         
-          BlueButton("Reset Password", () {}),
+          PinFieldAutoFill(
+                decoration: UnderlineDecoration(
+                  textStyle: TextStyle(fontSize: 20, color: Colors.black),
+                  colorBuilder: FixedColorBuilder(Colors.black.withOpacity(0.3)),
+                ),)
         ],
       ),
     );
