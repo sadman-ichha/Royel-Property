@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:royal_property/ui/styles/style.dart';
+import 'package:royal_property/ui/widgets/blue_button.dart';
 import 'package:royal_property/ui/widgets/custom_text_field.dart';
 import 'package:royal_property/ui/widgets/white_appbar.dart';
 
@@ -10,11 +11,12 @@ class ForgetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: WhiteAppBar("Skip", () {}),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 50.0.h),
+          WhiteAppBar("Skip", () {}),
           SizedBox(height: 37.0.h),
           Center(
             child: Text("Forgot password",
@@ -31,7 +33,9 @@ class ForgetPasswordScreen extends StatelessWidget {
           ),
           SizedBox(height: 37.0.h),
           customTextField(
-              "your@gmail.com", _emailController, TextInputType.emailAddress)
+              "your@gmail.com", _emailController, TextInputType.emailAddress),
+          SizedBox(height: 40.0.h),
+          BlueButton("Reset Password", () {})
         ],
       ),
     );
