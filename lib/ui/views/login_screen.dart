@@ -27,7 +27,7 @@ class LogInScreen extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 24.0.sp,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF1B1E28))),
+                      color: const Color(0xFF1B1E28))),
             ),
             SizedBox(height: 14.0.h),
             Text("Please sign in to continue our app",
@@ -48,7 +48,7 @@ class LogInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   InkWell(
-                    onTap: ()=> Get.toNamed(forgetpassword),
+                    onTap: () => Get.toNamed(forgetpassword),
                     child: Text("Forget Password?",
                         style: TextStyle(
                             fontSize: 16.0.sp,
@@ -59,9 +59,9 @@ class LogInScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 81.0.h),
-            BlueButton("Sign In", () {}),
+            BlueButton("Sign In", () {}), 
             SizedBox(height: 40.0.h),
-            AppStyles().richText("Don’t have an account?", " Sign Up", login),
+            AppStyles().richText("Don’t have an account?", " Sign Up",login),
             SizedBox(height: 16.0.h),
             Text("Or connect", style: AppStyles.textStyle),
             SizedBox(height: 46.0.h),

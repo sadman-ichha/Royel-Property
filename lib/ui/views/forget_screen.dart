@@ -80,7 +80,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               "your@gmail.com", _emailController, TextInputType.emailAddress),
           SizedBox(height: 40.0.h),
           BlueButton("Reset Password", () {
-            // checkEmailPopup(context);
+            checkEmailPopup(context);
             Get.toNamed(otpverificationscreen);
           }),
         ],
