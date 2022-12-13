@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   void onReady() {
     Future.delayed(
       Duration(seconds: 3),
-      () => Get.offAll(OnBoardingScreen()),
+      () => Get.offAllNamed(onboarding),
     );
 
     super.onReady();
